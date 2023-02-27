@@ -54,8 +54,16 @@ class _MainScreenState extends State<MainScreen> {
               ),
               CustomButton(
                 onPressed: () {
+                  print("a" + _usrname1controller.text + "a");
+                  if(_usrname1controller.text == ""){
+                    _usrname1controller.text = "player1";
+                  }
+                  if(_usrname2controller.text == ""){
+                    _usrname2controller.text = "player2";
+                  }
                   Navigator.pushNamed(context, '/gamescreen', arguments: {
-                    "player1": _usrname1controller.text,
+                    
+                      "player1": _usrname1controller.text,
                     "player2": _usrname2controller.text
                   });
                 },
